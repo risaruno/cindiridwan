@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../src/img/rustic-bg/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #FFECCB;
+}
+
+.container {
+    max-width: 728px;
+}
+
+.title {
+    padding: 10px;
+}
+
+/* CARD */
+
+.m-card {
+    border-radius: 10px;
+    color: #826E52;
+    margin: 2vh;
+    transition: all 1s ease-in-out;
+}
+
+.card-subtitle {
+    text-align: right;
+    font-size: small;
+}
+
+/* CUSTOM SHADOW HOVERING STYLE */
+
+.sh-hover {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    transition: 500ms;
+}
+
+.sh-hover:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.m-card.new {
+    animation-name: show;
+    animation-duration: 1s;
+}
+
+@keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

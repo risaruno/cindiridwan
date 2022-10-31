@@ -1,0 +1,1009 @@
+@font-face {
+  font-family: "Rancho";
+  src: url("src/font/Rancho-Regular.ttf");
+}
+@font-face {
+  font-family: "Damion";
+  src: url("src/font/Damion-Regular.ttf");
+}
+@font-face {
+  font-family: "Mist";
+  src: url("src/font/Mistrully.ttf");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("src/font/Quicksand-Regular.ttf");
+}
+@font-face {
+  font-family: "Pompiere";
+  src: url("src/font/Pompiere-Regular.ttf");
+}
+@font-face {
+  font-family: "Adam Script";
+  src: url("src/font/Adam Script.ttf");
+}
+@font-face {
+  font-family: "Support";
+  src: url("src/font/Support/Flaticon.ttf");
+}
+@font-face {
+  font-family: "Wedding";
+  src: url("src/font/Wedding/Flaticon.ttf");
+}
+
+:root {
+  --blue-dark: #6f90ae;
+  --blue-light: #a5c1e0;
+  --dark-theme: #737373;
+  --font-dark: #3c3d3b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Pompiere";
+  overflow: hidden;
+}
+
+/* PRELOADER */
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: translateY(0);
+  background-color: #ffebca;
+  color: #000;
+}
+
+.loaded #loader-wrapper {
+  transform: translateY(-100%);
+  transition: 500ms ease-in-out;
+}
+
+.main {
+  visibility: hidden;
+}
+
+.loaded .main {
+  visibility: visible;
+}
+
+#loader-wrapper img {
+  position: absolute;
+  width: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* INVITE MESSAGE */
+
+.letter {
+  background-image: url("src/img/letter-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10%;
+  z-index: 3;
+
+  background-color: #fff;
+  color: var(--font-dark);
+  font-family: "Pompiere";
+  font-size: 36px;
+  transform: translateY(0);
+}
+
+.letter .column {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+
+.letter .column:first-of-type,
+.letter .column:last-of-type {
+  padding: 5vh;
+}
+
+.slide {
+  transform: translateY(-100%);
+  transition: 500ms ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+#open {
+  font-size: 36px;
+  padding: 10px 50px;
+  margin: 10px;
+}
+
+#guest {
+  font-weight: bold;
+}
+
+.names {
+  font-family: "Mist";
+  font-size: 48px;
+  text-align: right;
+  padding: 20px 0;
+}
+
+/* COVER */
+
+.cover {
+  background-image: url("src/img/HH_Cover.png");
+  background-color: var(--font-dark);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+
+  display: flex;
+  justify-content: space-between;
+  font-family: "Mist";
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 2px 3px #454545;
+  height: 110vh;
+}
+
+.cover-couple {
+  font-size: 82px;
+  line-height: 1.2;
+}
+
+.cover > .column {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.show-cover > .column {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* COUPLE */
+
+.couple {
+  background-image: url("src/img/rustic-bg/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  font-size: 32px;
+  color: var(--font-dark);
+}
+
+.bride,
+.groom,
+.and {
+  font-family: "Pompiere";
+}
+
+.couple-title {
+  font-family: "Damion" !important;
+  font-size: 68px;
+  transform: translateY(50px);
+}
+
+.img-couple {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: width 500ms, height 500ms, margin 500ms;
+  filter: grayscale(100%);
+}
+
+.img-couple:hover {
+  width: 330px;
+  height: 330px;
+  margin: 0;
+}
+
+.name {
+  font-family: "Adam Script";
+  padding: 20px 0;
+}
+
+.name > * {
+  line-height: 100%;
+}
+
+.first {
+  font-size: 86px;
+}
+
+.last {
+  font-size: 74px;
+}
+
+.parent {
+  line-height: 120%;
+}
+
+.couple-hr {
+  text-align: center;
+  width: 60%;
+  border: 1px solid var(--font-dark);
+  border-radius: 20px;
+  margin: auto;
+}
+
+.socialmedia > a {
+  font-size: 42px;
+  color: inherit;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.socialmedia > a:hover {
+  color: #5a4d3e;
+}
+
+.icon {
+  vertical-align: middle;
+  padding: 10px;
+  font-style: normal;
+}
+
+div.and {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.and > span {
+  font-size: 98px;
+}
+
+/* SAVE DATE */
+
+.dDay {
+  background-image: url("src/img/HH_BG.jpeg");
+  background-color: #00000039;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+
+  font-family: "Pompiere";
+  font-size: 32px;
+  text-align: center;
+  color: var(--font-dark);
+}
+
+.dDay > div {
+  justify-content: center;
+}
+
+.words {
+  display: inline-block;
+  font-size: 32px;
+  color: #ffffff;
+  margin: 10vh 0;
+}
+
+.words > p {
+  margin: 20px;
+}
+
+.saveDate {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.akad-card,
+.resepsi-card {
+  background-color: #fffefc;
+  border-right: 10px solid var(--font-dark);
+  border-bottom: 5px solid var(--font-dark);
+}
+
+.card-title {
+  font-family: "Damion";
+  font-size: 64px;
+  line-height: 0.5;
+}
+
+.ctitle {
+  line-height: 1.5;
+}
+
+.card-title > hr {
+  width: 90%;
+  height: 5px;
+  border-radius: 2px;
+  margin: 0 5%;
+}
+
+.akad-card .list-group-item,
+.resepsi-card .list-group-item {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff00;
+}
+
+.list-group-flush {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.akad-card .list-icon,
+.resepsi-card .list-icon {
+  display: inline-block;
+  width: 20%;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.akad-card .list-icon-desc,
+.resepsi-card .list-icon-desc {
+  display: inline-block;
+  width: 78%;
+  padding: 10px 0;
+  text-align: left;
+}
+
+/*---COUNTDOWN */
+
+.count-title {
+  font-size: 82px;
+  text-shadow: 2px 3px var(--font-dark);
+  color: #ffffff;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.count-box {
+  background-color: #fffefc;
+  width: 15vh;
+  height: 15vh;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  border-right: 5px solid var(--font-dark);
+  border-bottom: 5px solid var(--font-dark);
+
+  font-size: 60px;
+  line-height: 0.8;
+  vertical-align: middle;
+}
+
+.ctime {
+  display: block;
+  font-size: 20px;
+}
+
+/*---DESSCODE */
+
+.dress-code {
+  color: #ffffff;
+}
+
+.dress-code .card-body {
+  padding: 0;
+}
+
+.dress-card {
+  max-width: 70vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fffefc;
+  color: var(--font-dark);
+  text-align: center;
+  font-size: 52px;
+  line-height: 2;
+}
+
+.dress-card .list-group-item {
+  background-color: unset;
+  border: 0;
+  width: 50%;
+  align-items: center;
+}
+
+.dress-card .list-group-item:first-of-type,
+.dress-card .list-group-item:last-of-type {
+  width: 25%;
+}
+
+/* HEALTH */
+
+.health {
+  background-image: linear-gradient(to bottom, #ffffff 0%, #b5927e 100%);
+  font-family: "Pompiere";
+  display: flex;
+  justify-content: center;
+
+  padding: 10vh 0;
+  font-size: 24px;
+}
+
+.health-card {
+  border-right: 10px solid var(--font-dark);
+  border-bottom: 5px solid var(--font-dark);
+}
+
+.health-card .card-title {
+  font-family: "Pompiere";
+  color: black;
+  font-size: 92px;
+  font-weight: bolder;
+  padding: 20px;
+  line-height: 2;
+}
+
+.health-card .card-title img {
+  width: 75px;
+}
+
+.health-card .card-text {
+  padding: 0 5vw;
+}
+
+.health-card .list-group {
+  width: 100%;
+  border: 0;
+}
+
+.health-card .list-group-item {
+  width: 33%;
+  color: black;
+  padding: 20px 0;
+  border: 0;
+}
+
+.health-card .list-icon {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+.health-card .list-icon img {
+  width: 40%;
+}
+
+.health-card .list-icon-desc {
+  font-family: "Pompiere";
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  word-wrap: normal;
+}
+
+.health-card .card-footer {
+  background-color: #fff;
+  font-size: 12px;
+}
+
+.health-card .card-footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* LOCATION */
+
+.location {
+  padding: 10vh 0;
+}
+
+.location .row-title {
+  color: #ffffff;
+}
+
+.loc-hr {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+.alert {
+  font-family: "Pompiere";
+  font-size: 15px;
+}
+
+/* GALLERY */
+
+.gallery {
+  background-image: linear-gradient(to bottom, #fff 0%, #b5927e 100%);
+}
+
+.gallery-title {
+  color: #000;
+}
+
+.gallery-hr {
+  border-radius: 20px;
+}
+
+.img .col-lg-6 {
+  padding: 0;
+}
+
+.img-fluid {
+  width: 100%;
+  padding: 1vh;
+  border-radius: 1rem;
+  transition: 500ms;
+}
+
+.img-fluid:hover {
+  transform: scale(1.025);
+}
+
+/* PRAY */
+
+.pray .row-title {
+  color: var(--font-dark);
+}
+
+.surah {
+  background-color: #fffefc;
+  color: var(--font-dark);
+  font-family: "Pompiere";
+  font-size: 32px;
+  text-align: left;
+  padding: 5vh;
+  border-radius: 20px;
+}
+
+/* GIFT AND WISH */
+
+.giftnWish {
+  background-image: url("src/img/rustic-bg/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  color: var(--font-dark);
+  font-family: "Pompiere";
+  font-size: 20px;
+}
+
+#gift-modal .modal-content {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.gift {
+  margin: 32px 0;
+  padding: 15px 32px;
+}
+
+.gift > * {
+  text-align: center;
+  font-weight: bold;
+}
+
+.img-btn {
+  display: flex;
+  width: 30vh;
+  padding: 10px;
+  margin: 10px auto;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: inherit;
+  transition: 500ms;
+}
+
+.img-btn:hover {
+  background-color: #9f805950;
+}
+
+.img-btn > img {
+  width: 90%;
+  align-self: center;
+}
+
+.giftAccount {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.wish {
+  padding: 0 32px;
+}
+
+.wish-card {
+  background-color: #fffefc;
+  color: var(--font-dark);
+}
+
+.after-form {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.form-success i {
+  color: #48ff63;
+  padding: 10px;
+}
+
+.form-fail i {
+  color: #ff4848;
+  padding: 10px;
+}
+
+.btn-ref {
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-ref small {
+  font-size: small;
+}
+
+.btn-ref small i {
+  color: #7ad3ff;
+}
+
+.wish-form > .spinner-border {
+  margin: 10vh 0;
+}
+
+/* THANK YOU */
+
+.thank-you {
+  text-align: center;
+}
+
+.thank-you > div {
+  font-size: 36px;
+  padding: 20vh 10vh;
+}
+
+.ty-couple {
+  font-family: "Mist";
+  padding: 2vh;
+}
+
+/* COSTUMIZATION */
+
+.container-fluid {
+  padding: 0;
+}
+
+.column {
+  padding: 5vh 10vh;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.row > .column:first-of-type {
+  margin-top: 10vh;
+}
+
+.row > .column:last-of-type {
+  margin-bottom: 10vh;
+}
+
+.col-lg-2,
+.col-lg-5,
+.col-lg-6 {
+  padding: 5vh;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.row-title {
+  font-family: "Damion";
+  font-size: 92px;
+  text-align: center;
+  text-shadow: 2px 3px #45454584;
+}
+
+.icon-sp {
+  font-family: "Support";
+}
+
+.icon-wd {
+  font-family: "Wedding";
+}
+
+/* CUSTOM BUTTON */
+
+.btn-saveDate {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fffefc;
+  border: 5px solid #fffefc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 500ms;
+}
+
+.btn-saveDate:hover {
+  background-color: #fffefc;
+  color: var(--font-dark);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+}
+
+.btn-rusty {
+  background-color: #fffefc;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.btn-rusty:hover {
+  background-color: #f5e2c3;
+}
+
+.btn-letter {
+  background-color: #faf1d7;
+  color: #d69d6e;
+  border: 5px solid #d69d6e;
+  border-radius: 20px;
+  transition: 500ms;
+}
+
+.btn-letter:hover {
+  background-color: #faf1d7;
+  color: var(--font-dark);
+  border: 5px solid var(--font-dark);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #00000080;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000a1;
+}
+
+/* CUSTOM SIDEBAR NAV */
+
+.hover-navbar {
+  font-family: "Pompiere";
+  position: fixed;
+  width: 200px;
+  top: 10vh;
+  right: -100px;
+  left: unset;
+  bottom: unset;
+  z-index: 2;
+  font-size: 16px;
+}
+
+.hover-navbar i {
+  font-size: 30px;
+}
+
+.list-group-item-action,
+.list-group-item-action:focus,
+.list-group-item-action:active {
+  background-color: #ffffff;
+  color: var(--font-dark);
+  width: 130px;
+  margin-left: 70px;
+  border: 0;
+  border-left: 30px solid var(--font-dark);
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.list-group-item-action:hover {
+  background-color: #ffffff;
+  color: var(--font-dark);
+  width: 200px;
+  padding-right: 120px;
+  margin-left: 0;
+  border-left: 10px solid var(--font-dark);
+}
+
+.list-group-item-action.active {
+  background-color: #ffffff;
+  color: var(--font-dark);
+  width: 200px;
+  padding-right: 120px;
+  margin-left: 0;
+  border-left: 10px solid var(--font-dark);
+}
+
+.hp-menu {
+  background-color: #01c26e;
+  color: #fffefc;
+  width: 130px;
+  border: 0;
+  border-left: 30px solid #00af63;
+  word-wrap: break-word;
+  line-height: 1;
+}
+
+.hp-menu span {
+  font-size: smaller;
+}
+
+.hp-menu:hover {
+  background-color: #01c26e;
+  color: #fffefc;
+  border-left: 10px solid #00af63;
+  padding-left: 10px;
+  padding-right: 120px;
+}
+
+.hp-menu.active {
+  background-color: #01c26e;
+  color: #fffefc;
+  border-left: 10px solid #00af63;
+  padding-left: 10px;
+  padding-right: 120px;
+}
+
+/* CUSTOM SHADOW HOVERING STYLE */
+
+.sh-hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: 500ms;
+}
+
+.sh-hover:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/*---AUDIO */
+
+.audio {
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: #fff0dd76;
+  color: #000;
+  text-align: center;
+  transition: 500ms;
+}
+
+.audio:hover {
+  background-color: #fff0dddc;
+  color: #000;
+  text-align: center;
+}
+
+.audio i {
+  align-self: center;
+  font-size: 20px;
+  padding: 15px;
+}
+
+/* DIVIDER */
+
+.divider {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider-bottom {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+.divider svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10vh;
+  padding: 0;
+  margin: 0;
+}
+
+.divider-top.cover-d .shape-fill {
+  fill: #ffffff00;
+}
+
+.divider-bottom.cover-d .shape-fill {
+  fill: #ffffff;
+}
+
+.divider-top.dDay-d .shape-fill {
+  fill: #ffffff;
+}
+
+.divider-bottom.health-d .shape-fill {
+  fill: #fff;
+}
+
+.divider-top.wish-d .shape-fill {
+  fill: #b5927e;
+}
+
+/* FOOTER */
+
+footer {
+  background-image: linear-gradient(to right, #00c4cc 0%, #4cd6b4 100%);
+  color: #fff;
+  font-family: "Pompiere";
+  font-weight: bolder;
+  text-align: center;
+  padding: 5vh 20vh;
+}
+
+footer img {
+  width: 100px;
+  padding: 10px;
+  animation-name: risaruno;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
+}
+
+@keyframes risaruno {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -moz-transform: rotate(0);
+  }
+}

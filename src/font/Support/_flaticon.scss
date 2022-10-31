@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fimanager:before {
+    display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-001-problem-solving:before { content: "\f100"; }
+.flaticon-002-24-hours:before { content: "\f101"; }
+.flaticon-003-calling:before { content: "\f102"; }
+.flaticon-004-questions:before { content: "\f103"; }
+.flaticon-005-megaphone:before { content: "\f104"; }
+.flaticon-006-customer-service:before { content: "\f105"; }
+.flaticon-007-guidebook:before { content: "\f106"; }
+.flaticon-008-web:before { content: "\f107"; }
+.flaticon-009-helping-hand:before { content: "\f108"; }
+.flaticon-010-technical-support:before { content: "\f109"; }
+.flaticon-011-donation:before { content: "\f10a"; }
+.flaticon-012-smartphones:before { content: "\f10b"; }
+.flaticon-013-email:before { content: "\f10c"; }
+.flaticon-014-teamwork:before { content: "\f10d"; }
+.flaticon-015-thinking:before { content: "\f10e"; }
+.flaticon-016-social-care:before { content: "\f10f"; }
+.flaticon-017-giving:before { content: "\f110"; }
+.flaticon-018-internet:before { content: "\f111"; }
+.flaticon-019-searching:before { content: "\f112"; }
+.flaticon-020-net:before { content: "\f113"; }
+.flaticon-021-help:before { content: "\f114"; }
+.flaticon-022-gear:before { content: "\f115"; }
+.flaticon-023-thumb-up:before { content: "\f116"; }
+.flaticon-024-file:before { content: "\f117"; }
+.flaticon-025-location:before { content: "\f118"; }
+.flaticon-026-question:before { content: "\f119"; }
+.flaticon-027-rating:before { content: "\f11a"; }
+.flaticon-028-feedback:before { content: "\f11b"; }
+.flaticon-029-guidance:before { content: "\f11c"; }
+.flaticon-030-forum:before { content: "\f11d"; }
+.flaticon-031-rating:before { content: "\f11e"; }
+.flaticon-032-review:before { content: "\f11f"; }
+.flaticon-033-motivation:before { content: "\f120"; }
+.flaticon-034-faq:before { content: "\f121"; }
+.flaticon-035-motivation:before { content: "\f122"; }
+.flaticon-036-family:before { content: "\f123"; }
+.flaticon-037-hand:before { content: "\f124"; }
+.flaticon-038-volunteer:before { content: "\f125"; }
+.flaticon-039-padlock:before { content: "\f126"; }
+.flaticon-040-charity:before { content: "\f127"; }
+.flaticon-041-folder:before { content: "\f128"; }
+.flaticon-042-computer:before { content: "\f129"; }
+.flaticon-043-kindness:before { content: "\f12a"; }
+.flaticon-044-handshake:before { content: "\f12b"; }
+.flaticon-045-achievement:before { content: "\f12c"; }
+.flaticon-046-medical-support:before { content: "\f12d"; }
+.flaticon-047-toolbox:before { content: "\f12e"; }
+.flaticon-048-instructions:before { content: "\f12f"; }
+.flaticon-049-share:before { content: "\f130"; }
+.flaticon-050-gear:before { content: "\f131"; }
+
+$font-Flaticon-001-problem-solving: "\f100";
+$font-Flaticon-002-24-hours: "\f101";
+$font-Flaticon-003-calling: "\f102";
+$font-Flaticon-004-questions: "\f103";
+$font-Flaticon-005-megaphone: "\f104";
+$font-Flaticon-006-customer-service: "\f105";
+$font-Flaticon-007-guidebook: "\f106";
+$font-Flaticon-008-web: "\f107";
+$font-Flaticon-009-helping-hand: "\f108";
+$font-Flaticon-010-technical-support: "\f109";
+$font-Flaticon-011-donation: "\f10a";
+$font-Flaticon-012-smartphones: "\f10b";
+$font-Flaticon-013-email: "\f10c";
+$font-Flaticon-014-teamwork: "\f10d";
+$font-Flaticon-015-thinking: "\f10e";
+$font-Flaticon-016-social-care: "\f10f";
+$font-Flaticon-017-giving: "\f110";
+$font-Flaticon-018-internet: "\f111";
+$font-Flaticon-019-searching: "\f112";
+$font-Flaticon-020-net: "\f113";
+$font-Flaticon-021-help: "\f114";
+$font-Flaticon-022-gear: "\f115";
+$font-Flaticon-023-thumb-up: "\f116";
+$font-Flaticon-024-file: "\f117";
+$font-Flaticon-025-location: "\f118";
+$font-Flaticon-026-question: "\f119";
+$font-Flaticon-027-rating: "\f11a";
+$font-Flaticon-028-feedback: "\f11b";
+$font-Flaticon-029-guidance: "\f11c";
+$font-Flaticon-030-forum: "\f11d";
+$font-Flaticon-031-rating: "\f11e";
+$font-Flaticon-032-review: "\f11f";
+$font-Flaticon-033-motivation: "\f120";
+$font-Flaticon-034-faq: "\f121";
+$font-Flaticon-035-motivation: "\f122";
+$font-Flaticon-036-family: "\f123";
+$font-Flaticon-037-hand: "\f124";
+$font-Flaticon-038-volunteer: "\f125";
+$font-Flaticon-039-padlock: "\f126";
+$font-Flaticon-040-charity: "\f127";
+$font-Flaticon-041-folder: "\f128";
+$font-Flaticon-042-computer: "\f129";
+$font-Flaticon-043-kindness: "\f12a";
+$font-Flaticon-044-handshake: "\f12b";
+$font-Flaticon-045-achievement: "\f12c";
+$font-Flaticon-046-medical-support: "\f12d";
+$font-Flaticon-047-toolbox: "\f12e";
+$font-Flaticon-048-instructions: "\f12f";
+$font-Flaticon-049-share: "\f130";
+$font-Flaticon-050-gear: "\f131";
