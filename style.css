@@ -3,10 +3,6 @@
   src: url("src/font/Rancho-Regular.ttf");
 }
 @font-face {
-  font-family: "Damion";
-  src: url("src/font/Damion-Regular.ttf");
-}
-@font-face {
   font-family: "Mist";
   src: url("src/font/Mistrully.ttf");
 }
@@ -19,8 +15,8 @@
   src: url("src/font/Pompiere-Regular.ttf");
 }
 @font-face {
-  font-family: "Adam Script";
-  src: url("src/font/Adam Script.ttf");
+  font-family: "BakerieRough";
+  src: url("src/font/BakerieRough-Bold.otf");
 }
 @font-face {
   font-family: "Support";
@@ -60,7 +56,7 @@ body {
   height: 100%;
   z-index: 10;
   transform: translateY(0);
-  background-color: #ffebca;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -88,7 +84,7 @@ body {
 /* INVITE MESSAGE */
 
 .letter {
-  background-image: url("src/img/letter-bg.png");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -101,7 +97,6 @@ body {
   padding: 0 10%;
   z-index: 3;
 
-  background-color: #fff;
   color: var(--font-dark);
   font-family: "Pompiere";
   font-size: 36px;
@@ -148,7 +143,7 @@ body {
 /* COVER */
 
 .cover {
-  background-image: url("src/img/HH_Cover.png");
+  background-image: url("src/img/Cover/DSC00034.JPG");
   background-color: var(--font-dark);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -200,7 +195,7 @@ body {
 }
 
 .couple-title {
-  font-family: "Damion" !important;
+  font-family: "BakerieRough" !important;
   font-size: 68px;
   transform: translateY(50px);
 }
@@ -222,7 +217,7 @@ body {
 }
 
 .name {
-  font-family: "Adam Script";
+  font-family: "BakerieRough";
   padding: 20px 0;
 }
 
@@ -322,7 +317,7 @@ div.and {
 }
 
 .card-title {
-  font-family: "Damion";
+  font-family: "BakerieRough";
   font-size: 64px;
   line-height: 0.5;
 }
@@ -374,6 +369,7 @@ div.and {
   font-size: 82px;
   text-shadow: 2px 3px var(--font-dark);
   color: #ffffff;
+  font-family: "BakerieRough";
 }
 
 .timer {
@@ -437,7 +433,7 @@ div.and {
 /* HEALTH */
 
 .health {
-  background-image: linear-gradient(to bottom, #ffffff 0%, #b5927e 100%);
+  background-color: #000000;
   font-family: "Pompiere";
   display: flex;
   justify-content: center;
@@ -529,12 +525,14 @@ div.and {
 .alert {
   font-family: "Pompiere";
   font-size: 15px;
+  background-color: var(--blue-dark);
+  color:#ffffff;
 }
 
 /* GALLERY */
 
 .gallery {
-  background-image: linear-gradient(to bottom, #fff 0%, #b5927e 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #646463 100%);
 }
 
 .gallery-title {
@@ -721,7 +719,7 @@ div.and {
 }
 
 .row-title {
-  font-family: "Damion";
+  font-family: "BakerieRough";
   font-size: 92px;
   text-align: center;
   text-shadow: 2px 3px #45454584;
@@ -767,9 +765,9 @@ div.and {
 }
 
 .btn-letter {
-  background-color: #faf1d7;
-  color: #d69d6e;
-  border: 5px solid #d69d6e;
+  background-color: var(--blue-light);
+  color: #ffffff;
+  border: 5px solid var(--blue-dark);
   border-radius: 20px;
   transition: 500ms;
 }
@@ -960,7 +958,7 @@ div.and {
 }
 
 .divider-top.wish-d .shape-fill {
-  fill: #b5927e;
+  fill: #646463;
 }
 
 /* FOOTER */
