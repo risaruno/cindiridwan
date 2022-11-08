@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url("../src/font/Quicksand-Regular.ttf");
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -6,10 +11,11 @@
 
 body {
     background-image: url('../src/img/rustic-bg/bg.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
-    background-color: #FFECCB;
+    background-color: #ffffff;
+    font-family: "Quicksand";
 }
 
 .container {
@@ -17,7 +23,9 @@ body {
 }
 
 .title {
-    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    padding: 30px;
 }
 
 /* CARD */

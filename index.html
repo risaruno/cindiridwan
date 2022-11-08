@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cindi & Ridwan | Re-Connect</title>
+    <title>Cindi & Ridwan | Kahfiart</title>
     <script>
         window.scrollTo(0,0);
     </script>
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="screen.css">
     <link rel="stylesheet" href="scroll.css">
-    <link rel="shortcut icon" type="image/x-icon" href="src/img/icon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="src/img/kahfiart-icon.png"/>
 </head>
 <body>
 <div id="loader-wrapper">
@@ -52,7 +52,7 @@
                 <a class="list-group-item list-group-item-action" href="#cover"><i class="flaticon-017-altar icon-wd icon"></i><br>Cover</a>
                 <a class="list-group-item list-group-item-action" href="#couple"><i class="flaticon-005-couple icon-wd icon"></i><br>Couple</a>
                 <a class="list-group-item list-group-item-action" href="#event"><i class="flaticon-015-date icon-wd icon"></i><br>Event</a>
-                <a class="list-group-item list-group-item-action hp-menu" href="#health"><i class="flaticon-046-medical-support icon-sp icon"></i><br>Health <span>Protocols</span></a>
+                <!-- <a class="list-group-item list-group-item-action hp-menu" href="#health"><i class="flaticon-046-medical-support icon-sp icon"></i><br>Health <span>Protocols</span></a> -->
                 <a class="list-group-item list-group-item-action" href="#gallery"><i class="flaticon-042-photo-album icon-wd icon"></i><br>Gallery</a>
                 <a class="list-group-item list-group-item-action" href="#wish"><i class="flaticon-012-gift icon-wd icon"></i><br>Wish</a>  
             </nav>
@@ -76,7 +76,7 @@
                 <div class="column col-lg-12 couple-title fade-out" id="couple-title">
                     We're Getting Married
                 </div>
-                <div class="column col-lg-5 brides">
+                <div class="column col-lg-5 bride">
                     <img src="src/img/Bride.jpeg" class="img-couple sh-hover" alt="Bride's Photo">
                     <div class="name">
                         <div class="first">Cindi</div>
@@ -205,9 +205,6 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.707421013883!2d107.65659199999999!3d-6.925534499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e72438f296ad%3A0x2d6946a92b3b327b!2sMesjid%20Nurul%20Amanah!5e0!3m2!1sen!2sid!4v1667588518606!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
                     </iframe>
                 </div>
-                
-            </div>
-            <div class="row section health" id="health">
                 <div class="column col-lg-12 health">
                     <div class="card text-center health-card sh-hover">
                         <div class="card-body">
@@ -280,43 +277,7 @@
                             <img src="src/img/Gallery/CR_9.JPG" alt="" class="img-fluid">
                             <img src="src/img/Gallery/CR_10.JPG" alt="" class="img-fluid">
                         </div>
-                    </div>
-                    
-                    
-                    <div class="modal fade" id="modalCarousel" tabindex="-1" aria-labelledby="modalCarouselLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-fullscreen">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalCarouselLabel">Gallery</h5>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="carouselInModal" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active" data-bs-interval="100000">
-                                            <img src="src/img/HH_1.jpg" class="d-block w-100" alt="HH_1">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="src/img/HH_2.jpg" class="d-block w-100" alt="HH_2">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="src/img/HH_3.jpg" class="d-block w-100" alt="HH_3">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInModal"  data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselInModal"  data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
             <div class="row section giftnWish" id="wish">  
@@ -363,6 +324,9 @@
                                         4372671282<br>
                                         a.n Ridwan Julian
                                     </div>
+                                    <div class="qrcode">
+                                        <img src="src/img/qrcode.jpeg" alt="QRCode">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -374,14 +338,14 @@
                             Wish and pray
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form class="wish-form needs-validation" id="wish-form" novalidate>
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Nama</label>
-                                    <input type="text" class="form-control guest" name="name" placeholder="Nama">
+                                    <input type="text" class="form-control guest" name="name" id="name" placeholder="Tuliskan nama anda">
                                 </div>
                                 <div class="mb-3">
                                     <label for="wish" class="form-label">Harapan dan doa</label>
-                                    <textarea class="form-control" name="wish" rows="5" placeholder="Tuliskan harapan dan doa anda untuk kami"></textarea>
+                                    <textarea class="form-control" name="msg" id="msg" rows="5" placeholder="Tuliskan harapan dan doa anda untuk kami"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-rusty">Kirim</button>
                               </form>
@@ -398,8 +362,8 @@
             </div>
             <footer>
                 <div>
-                    Designed by re-connect.online
-                    <a target="_blank" href="re-connect.000webhostapp.com"><img src="src/img/icon.png" alt="Risaruno"></a>
+                    Designed by kahfi.art
+                    <a target="_blank" href="https://kahfi.art"><img src="src/img/kahfiart-icon.png" alt="Kahfiart"></a>
                 </div>
             </footer>
         </div>
@@ -413,5 +377,11 @@
 <script src="function.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 <script src="scroll.js"></script>
+<script src="ajax.js"></script>
+<script src="scroll.js"></script>
+<script src="ajax.js"></script>
 </html>

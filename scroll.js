@@ -8,7 +8,6 @@ $(document).ready(function(){
         [".bride","slide-right","100","140%"],
         [".groom","slide-left","100","140%"],
         [".words","fade","100","140%"],
-        [".saveDate","fade","50","70%"],
         [".akad-card","slide-right","-50","120%"],
         [".resepsi-card","slide-left","-50","120%"],
         [".count-down","slide-up","0","90%"],

@@ -7,7 +7,7 @@ document.onreadystatechange = function () {
         setTimeout(function(){
             window.scrollTo(0,0);
             document.getElementsByTagName('body')[0].className = 'loaded';
-        }, 3000);
+        }, 300000000000);
 
     }
 }

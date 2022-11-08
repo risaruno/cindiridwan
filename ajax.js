@@ -18,7 +18,8 @@ $("#wish-form").submit(function(e) {
         var afterForm = "<h3 class='after-form'></h3>";
         var spinner = "<div class='spinner-border text-dark' role='status'><span class='visually-hidden'>Loading...</span></div>";
         var name = $("input#name").val();
-        var msg = $("textarea#wish").val();
+        var msg = $("textarea#msg").val();
+        console.log(name, msg);
         $.ajax({
             url: 'send.php',
             method: 'POST',

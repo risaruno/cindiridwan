@@ -35,7 +35,7 @@
     /* COVER */
     
     .cover {
-        background-image: url('src/img/Cover/DSC00034.JPG');
+        background-image: url('src/img/Cover/Cover.JPG');
         justify-content: flex-start;
         font-size: 24px;
     }
@@ -138,7 +138,7 @@
     /* HEALTH */
 
     .health {
-        font-size: 13px;
+        font-size: 18px;
     }
 
     .health-card .card-title {
@@ -170,10 +170,20 @@
     /* LOCATION */
 
     .location .alert {
-        font-size: 10px;
+        font-size: 18px;
     }
 
     /* GALLERY */
+
+    .row.img > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-fluid {
+        max-width: 500px;
+    }
 
     /* PRAY */
 
@@ -223,7 +233,9 @@
         right: unset;
         bottom: 0;
         left: 0;
-        font-size: 10px;
+        font-size: 16px;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .hover-navbar i {
@@ -234,10 +246,12 @@
     .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
         background-color: #FFFFFF;
         color: var(--blue-dark);
-        width: 16.66666666666667%;
+        width: 20%;
+        max-width: 100px;
+        height: 9.5vh;
         margin: 0;
-        padding: 10px 5px;
-        border: 0;
+        padding: 15px 5px;
+        border: 0 !important;
         text-align: center;
         line-height: 0.5;
     }
@@ -245,11 +259,11 @@
     .list-group-item-action:hover, .list-group-item.active {
         background-color: #FFFFFF;
         color: var(--blue-dark);
-        width: 16.66666666666667%;
+        width: 20%;
         margin: 0;
-        padding: 5px;
-        border: 0;
-        border-bottom: 5px solid var(--blue-dark);
+        padding: 10px 5px;
+        border: 0 !important;
+        border-bottom: 5px solid var(--blue-dark) !important;
     }
     
     .hp-menu {

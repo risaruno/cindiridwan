@@ -19,6 +19,10 @@
   src: url("src/font/BakerieRough-Bold.otf");
 }
 @font-face {
+  font-family: "Socialmedia";
+  src: url("src/font/Socialmedia/Flaticon.ttf");
+}
+@font-face {
   font-family: "Support";
   src: url("src/font/Support/Flaticon.ttf");
 }
@@ -30,8 +34,13 @@
 :root {
   --blue-dark: #6f90ae;
   --blue-light: #a5c1e0;
+  --blue-hover: #dfeeff;
   --dark-theme: #737373;
   --font-dark: #3c3d3b;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -75,7 +84,7 @@ body {
 
 #loader-wrapper img {
   position: absolute;
-  width: 50vh;
+  width: 30vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -143,7 +152,7 @@ body {
 /* COVER */
 
 .cover {
-  background-image: url("src/img/Cover/DSC00034.JPG");
+  background-image: url("src/img/Cover/Cover.JPG");
   background-color: var(--font-dark);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -245,15 +254,32 @@ body {
   margin: auto;
 }
 
+.socialmedia {
+  height: 60px;
+}
+
 .socialmedia > a {
+  height: 100%;
   font-size: 42px;
   color: inherit;
   text-decoration: none;
   transition: 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .socialmedia > a:hover {
   color: #5a4d3e;
+}
+
+.socialmedia > a > .icon {
+  padding: 0 10px;
+}
+
+.socialmedia i {
+  font-family: 'Socialmedia';
 }
 
 .icon {
@@ -275,7 +301,7 @@ div.and {
 /* SAVE DATE */
 
 .dDay {
-  background-image: url("src/img/HH_BG.jpeg");
+  background-image: url("src/img/Background.jpeg");
   background-color: #00000039;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
@@ -289,15 +315,17 @@ div.and {
   color: var(--font-dark);
 }
 
-.dDay > div {
+.dDay > .col-lg-6 {
+  display: flex;
   justify-content: center;
 }
 
 .words {
+  max-width: 1000px;
   display: inline-block;
   font-size: 32px;
   color: #ffffff;
-  margin: 10vh 0;
+  margin: 10vh auto;
 }
 
 .words > p {
@@ -310,8 +338,8 @@ div.and {
 }
 
 .akad-card,
-.resepsi-card {
-  background-color: #fffefc;
+.resepsi-card {  
+  background-color: #ffffff;
   border-right: 10px solid var(--font-dark);
   border-bottom: 5px solid var(--font-dark);
 }
@@ -378,7 +406,7 @@ div.and {
 }
 
 .count-box {
-  background-color: #fffefc;
+  background-color: #ffffff;
   width: 15vh;
   height: 15vh;
   margin: 10px;
@@ -389,7 +417,9 @@ div.and {
 
   font-size: 60px;
   line-height: 0.8;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .ctime {
@@ -411,7 +441,7 @@ div.and {
   max-width: 70vh;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: #fffefc;
+  background-color: #ffffff;
   color: var(--font-dark);
   text-align: center;
   font-size: 52px;
@@ -433,7 +463,6 @@ div.and {
 /* HEALTH */
 
 .health {
-  background-color: #000000;
   font-family: "Pompiere";
   display: flex;
   justify-content: center;
@@ -443,6 +472,7 @@ div.and {
 }
 
 .health-card {
+  max-width: 800px !important;
   border-right: 10px solid var(--font-dark);
   border-bottom: 5px solid var(--font-dark);
 }
@@ -450,7 +480,7 @@ div.and {
 .health-card .card-title {
   font-family: "Pompiere";
   color: black;
-  font-size: 92px;
+  font-size: 64px;
   font-weight: bolder;
   padding: 20px;
   line-height: 2;
@@ -524,9 +554,20 @@ div.and {
 
 .alert {
   font-family: "Pompiere";
-  font-size: 15px;
+  font-size: 24px;
   background-color: var(--blue-dark);
-  color:#ffffff;
+  color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.location > iframe {
+  width: 100%;
+  height: 450;
+  border: 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* GALLERY */
@@ -565,7 +606,7 @@ div.and {
 }
 
 .surah {
-  background-color: #fffefc;
+  background-color: #ffffff;
   color: var(--font-dark);
   font-family: "Pompiere";
   font-size: 32px;
@@ -627,12 +668,18 @@ div.and {
   padding: 20px;
 }
 
+.qrcode > img {
+  margin: 10px;
+  width: 60%;
+}
+
 .wish {
   padding: 0 32px;
 }
 
 .wish-card {
-  background-color: #fffefc;
+  margin: 0 auto;
+  background-color: #ffffff;
   color: var(--font-dark);
 }
 
@@ -695,6 +742,11 @@ div.and {
   padding: 5vh 10vh;
 }
 
+.letter > .row {
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
 .row {
   padding: 0;
   margin: 0;
@@ -715,6 +767,7 @@ div.and {
 }
 
 .card {
+  max-width: 500px;
   border-radius: 20px;
 }
 
@@ -736,17 +789,18 @@ div.and {
 /* CUSTOM BUTTON */
 
 .btn-saveDate {
-  background-color: rgba(0, 0, 0, 0);
-  color: #fffefc;
-  border: 5px solid #fffefc;
-  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 5px solid var(--blue-light);
+  border-radius: 20px;
   padding: 10px 20px;
   transition: 500ms;
 }
 
 .btn-saveDate:hover {
-  background-color: #fffefc;
-  color: var(--font-dark);
+  background-color: var(--blue-light);
+  color: #ffffff;
+  border: 5px solid var(--blue-dark);
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
@@ -755,27 +809,28 @@ div.and {
 }
 
 .btn-rusty {
-  background-color: #fffefc;
+  background-color: #ffffff;
   border: 2px solid black;
   border-radius: 10px;
+  transition: 500ms;
 }
 
 .btn-rusty:hover {
-  background-color: #f5e2c3;
+  background-color: var(--blue-hover);
 }
 
 .btn-letter {
-  background-color: var(--blue-light);
-  color: #ffffff;
-  border: 5px solid var(--blue-dark);
+  background-color: transparent;
+  color: #000000;
+  border: 5px solid var(--blue-light);
   border-radius: 20px;
   transition: 500ms;
 }
 
 .btn-letter:hover {
-  background-color: #faf1d7;
-  color: var(--font-dark);
-  border: 5px solid var(--font-dark);
+  background-color: var(--blue-light);
+  color: #ffffff;
+  border: 5px solid var(--blue-dark);
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -810,6 +865,8 @@ div.and {
   bottom: unset;
   z-index: 2;
   font-size: 16px;
+  flex-direction: column;
+  justify-content: normal;
 }
 
 .hover-navbar i {
@@ -820,39 +877,40 @@ div.and {
 .list-group-item-action:focus,
 .list-group-item-action:active {
   background-color: #ffffff;
-  color: var(--font-dark);
+  color: var(--blue-dark);
   width: 130px;
+  height: 85px;
   margin-left: 70px;
   border: 0;
-  border-left: 30px solid var(--font-dark);
+  border-left: 30px solid var(--blue-light) !important;
   text-align: center;
   transition: all 0.5s;
 }
 
 .list-group-item-action:hover {
   background-color: #ffffff;
-  color: var(--font-dark);
+  color: var(--blue-dark);
   width: 200px;
   padding-right: 120px;
   margin-left: 0;
-  border-left: 10px solid var(--font-dark);
+  border-left: 10px solid var(--blue-light) !important;
 }
 
 .list-group-item-action.active {
   background-color: #ffffff;
-  color: var(--font-dark);
+  color: var(--blue-dark);
   width: 200px;
   padding-right: 120px;
   margin-left: 0;
-  border-left: 10px solid var(--font-dark);
+  border-left: 10px solid var(--blue-light) !important;
 }
 
 .hp-menu {
   background-color: #01c26e;
-  color: #fffefc;
+  color: #ffffff;
   width: 130px;
   border: 0;
-  border-left: 30px solid #00af63;
+  border-left: 30px solid #00af63 !important;
   word-wrap: break-word;
   line-height: 1;
 }
@@ -863,16 +921,16 @@ div.and {
 
 .hp-menu:hover {
   background-color: #01c26e;
-  color: #fffefc;
-  border-left: 10px solid #00af63;
+  color: #ffffff;
+  border-left: 10px solid #00af63 !important;
   padding-left: 10px;
   padding-right: 120px;
 }
 
 .hp-menu.active {
   background-color: #01c26e;
-  color: #fffefc;
-  border-left: 10px solid #00af63;
+  color: #ffffff;
+  border-left: 10px solid #00af63 !important;
   padding-left: 10px;
   padding-right: 120px;
 }
@@ -896,15 +954,15 @@ div.and {
   right: 1vh;
   z-index: 2;
   border-radius: 50%;
-  background-color: #fff0dd76;
-  color: #000;
+  background-color: #ffffff;
+  color: var(--blue-dark);
   text-align: center;
   transition: 500ms;
 }
 
 .audio:hover {
-  background-color: #fff0dddc;
-  color: #000;
+  background-color: var(--blue-light);;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -965,8 +1023,8 @@ div.and {
 
 footer {
   background-image: linear-gradient(to right, #00c4cc 0%, #4cd6b4 100%);
-  color: #fff;
-  font-family: "Pompiere";
+  color: #ffffff;
+  font-family: "Quicksand";
   font-weight: bolder;
   text-align: center;
   padding: 5vh 20vh;

@@ -1,8 +1,8 @@
  <?php
 include '../connection/connection.php';
 
-$room = 1;
-$query = "SELECT * FROM `message` WHERE `room` = '$room' ORDER BY id DESC";
+$room = "cindiridwan";
+$query = "SELECT * FROM `message` WHERE `roomName` = '$room' ORDER BY id DESC";
 $result = mysqli_query($con, $query);
 
 if(mysqli_num_rows($result) > 0 ){
@@ -12,7 +12,7 @@ if(mysqli_num_rows($result) > 0 ){
         $h['id'] = $r["id"];
         $h['name'] = $r["name"];
         $h['message'] = $r["msg"];
-        $h['time'] = $r["datetime"];
+        $h['datetime'] = $r["datetime"];
         array_push($data["data"], $h);
     }
     echo json_encode($data);
