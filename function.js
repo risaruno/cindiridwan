@@ -46,7 +46,7 @@ function openLtr(){
 
 // PARTY COUNT DOWN //
 
-var dDay = new Date("Nov 22, 2022 09:00:00").getTime();
+var dDay = new Date("Nov 20, 2022 09:00:00").getTime();
 var x = setInterval(function(){
     var now = new Date().getTime();
     var distance = dDay - now;
